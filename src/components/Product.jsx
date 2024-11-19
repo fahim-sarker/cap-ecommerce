@@ -1,9 +1,12 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import {IoCheckmarkCircle,IoListCircleSharp,IoCartOutline,} from "react-icons/io5";
 import { FaStar } from "react-icons/fa";
 import { apidata } from "./ContextApi";
 import { MdArrowForwardIos } from "react-icons/md";
 import {Link} from "react-router-dom";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 const Product = () => {
   let capdata = useContext(apidata);
@@ -13,6 +16,7 @@ const Product = () => {
   let firstpage = lastpage - perpage;
   let capfulldata = capdata.slice(firstpage, lastpage);
   let pagenumber = [];
+  let [category, setCategory] = useState ();
 
   for (let i = 0; i < Math.ceil(capdata.length / perpage); i++) {
     pagenumber.push(i);
@@ -27,6 +31,11 @@ const Product = () => {
       setPage((state) => state + 1);
     }
   };
+
+  useEffect(()=>{
+    setCategory([...new Set(capdata.map((item)=>item.category))])
+  })
+  
 
   return (
     <div className="lg:py-28 py-5 lg:px-0 px-2">
@@ -192,12 +201,14 @@ const Product = () => {
             <div className="lg:flex lg:flex-wrap gap-y-6 justify-between mt-10">
               {capfulldata.map((capitem) => (
                 <div className="lg:w-[32%] w-full lg:mb-0 mb-3 bg-[#F4F4FF] lg:p-5 p-3 rounded-lg group">
-                  <Link to="/details">
+                  <Link to={`/${capitem.id}`}>
                   <div className="">
                   <div className="flex justify-between items-center opacity-0 group-hover:opacity-100 duration-500 ease-in-out">
                     <button className="bg-sky-400 px-3 py-2 rounded-full text-white font-roboto text-[18px]">
                       New
                     </button>
+                    {console.log(capitem.id)
+                    }
                     <div className="">
                       <p className="font-roboto text-[18px]">Reviews (18)</p>
                       <ul className="flex gap-x-3 items-center pt-2">

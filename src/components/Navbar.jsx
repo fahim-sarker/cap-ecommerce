@@ -61,9 +61,11 @@ const Navbar = () => {
           </div>
 
           <div className="lg:w-[30%] w-[40%] flex lg:gap-x-10 gap-x-3 justify-end">
+            <Link to="/contact">
             <button className="lg:border-2 lg:border-[#FFF] lg:font-semibold font-normal lg:px-12 lg:py-3 lg:rounded-md lg:text-[20px] text-[16px] font-roboto text-white lg:hover:bg-[#fff] lg:hover:text-[#007bff] capitalize duration-500 ease-in-out order-3 lg:order-2">
-              login
+              Contact
             </button>
+            </Link>
             <div className="flex items-center gap-x-5 lg:order-3 order-2 border-r-2 lg:border-0 pr-3">
               <FaShoppingCart className="lg:text-[20px] text-[18px] text-white" />
               <h4 className=" text-[20px] font-roboto font-medium cursor-pointer text-white capitalize lg:block hidden">
