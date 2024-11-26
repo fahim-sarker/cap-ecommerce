@@ -6,6 +6,7 @@ import Cartpage from "./pages/Cartpage";
 import Billingpage from "./pages/Billingpage";
 import Contact from "./pages/Contact";
 import Checkoutpage from "./pages/Checkoutpage";
+import Categoryproduct from "./pages/Categoryproduct";
 
 let router = createBrowserRouter(createRoutesFromElements(
   <Route element={<Rootlayout/>}>
@@ -15,6 +16,7 @@ let router = createBrowserRouter(createRoutesFromElements(
     <Route path="/bill" element={<Billingpage/>}></Route>
     <Route path="/contact" element={<Contact/>}></Route>
     <Route path="/checkout" element={<Checkoutpage/>}></Route>
+    <Route path="/category/:category" element={<Categoryproduct/>}></Route>
 
   </Route>
 ))

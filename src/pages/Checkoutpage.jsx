@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Checkoutpage = () => {
   return (
     <div>
-      <div className="container mx-auto py-[150px]">
+      <div className="container mx-auto lg:py-[150px] py-5 lg:px-0 px-2">
         <div className="text-center">
           <div className="flex justify-center">
             <GiCheckMark className="h-[50px] w-[50px] border-[2px] text-[#FF1788] rounded-full" />
@@ -13,7 +13,7 @@ const Checkoutpage = () => {
           <h2 className="font-joss text-[36px] font-semibold text-[#101750] py-8">
             Your Order Is Completed!
           </h2>
-          <p className="text-[16px] font-normal text-[#8D92A7] font-joss leading-7 w-[625px] mx-auto">
+          <p className="text-[16px] font-normal text-[#8D92A7] font-joss leading-7 lg:w-[625px] w-full mx-auto">
             Thank you for your order! Your order is being processed and will be
             completed within 3-6 hours. You will receive an email confirmation
             when your order is completed.

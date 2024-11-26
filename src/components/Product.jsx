@@ -207,8 +207,6 @@ const Product = () => {
                     <button className="bg-sky-400 px-3 py-2 rounded-full text-white font-roboto text-[18px]">
                       New
                     </button>
-                    {console.log(capitem.id)
-                    }
                     <div className="">
                       <p className="font-roboto text-[18px]">Reviews (18)</p>
                       <ul className="flex gap-x-3 items-center pt-2">
