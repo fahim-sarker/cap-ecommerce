@@ -2,14 +2,14 @@ import { MdArrowForwardIos } from "react-icons/md";
 import Ban from "../assets/banner2.jpg";
 import Ban1 from "../assets/elec.png";
 import Slider from "react-slick";
-import { useNavigate } from "react-router-dom"; // Importing useNavigate for redirection
+import { useNavigate } from "react-router-dom"; 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React, { useContext, useEffect, useState } from "react";
 import { apidata } from "./ContextApi";
 
 const Banner = () => {
-  const navigate = useNavigate(); // Hook to navigate between pages
+  const navigate = useNavigate();
   var settings = {
     dots: true,
     infinite: true,

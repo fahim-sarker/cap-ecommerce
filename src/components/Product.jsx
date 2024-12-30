@@ -189,7 +189,7 @@ const Product = () => {
           <div className="lg:w-[70%] w-full">
             <div className="flex lg:justify-end justify-center">
               <select
-                className="border-2 border-sky-400 h-[55px] lg:w-[200px] w-[250px] px-2 outline-none font-roboto text-[18px] font-medium"
+                className="border-2 border-sky-400 lg:h-[55px] h-[45px] lg:w-[200px] w-[150px] px-2 outline-none font-roboto lg:text-[18px] text-[14px] font-medium"
                 name=""
                 id=""
               >
@@ -198,58 +198,58 @@ const Product = () => {
                 <option value="20">Latest Product</option>
               </select>
             </div>
-            <div className="lg:flex lg:flex-wrap gap-y-6 justify-between mt-10">
+            <div className="flex flex-wrap gap-y-6 justify-between mt-10">
               {capfulldata.map((capitem) => (
-                <div className="lg:w-[32%] w-full lg:mb-0 mb-3 bg-[#F4F4FF] lg:p-5 p-3 rounded-lg group">
+                <div className="lg:w-[32%] w-[48%] lg:mb-0 mb-3 bg-[#F4F4FF] lg:p-5 p-2 rounded-lg group">
                   <Link to={`/${capitem.id}`}>
                   <div className="">
                   <div className="flex justify-between items-center opacity-0 group-hover:opacity-100 duration-500 ease-in-out">
-                    <button className="bg-sky-400 px-3 py-2 rounded-full text-white font-roboto text-[18px]">
+                    <button className="bg-sky-400 lg:px-3 lg:py-2 p-2 lg:rounded-full text-white font-roboto lg:text-[18px] text-[14px]">
                       New
                     </button>
-                    <div className="">
-                      <p className="font-roboto text-[18px]">Reviews (18)</p>
-                      <ul className="flex gap-x-3 items-center pt-2">
-                        <li className="text-sky-400">
+                    <div className="lg:ml-0 ml-2">
+                      <p className="font-roboto lg:text-[18px] text-[14px]">Reviews (18)</p>
+                      <ul className="flex lg:gap-x-3 gap-x-1 items-center lg:pt-2 pt-1">
+                        <li className="text-sky-400 lg:text-[20px] text-[14px]">
                           <FaStar />
                         </li>
-                        <li className="text-sky-400">
+                        <li className="text-sky-400 lg:text-[20px] text-[14px]">
                           <FaStar />
                         </li>
-                        <li className="text-sky-400">
+                        <li className="text-sky-400 lg:text-[20px] text-[14px]">
                           <FaStar />
                         </li>
-                        <li className="text-sky-400">
+                        <li className="text-sky-400 lg:text-[20px] text-[14px]">
                           <FaStar />
                         </li>
-                        <li className="text-sky-400">
+                        <li className="text-sky-400 lg:text-[20px] text-[14px]">
                           <FaStar />
                         </li>
                       </ul>
                     </div>
                   </div>
-                  <div className="my-10 mx-10 group-hover:scale-110 duration-500 ease-in-out">
+                  <div className="lg:my-10 lg:mx-10 m-5 group-hover:scale-110 duration-500 ease-in-out">
                     <img
                       src={capitem.image}
                       alt="product"
-                      className="lg:h-[300px] h-[150px] w-full rounded-lg"
+                      className="lg:h-[300px] h-[120px] w-full rounded-lg"
                     />
                   </div>
-                  <button className="flex gap-x-3 items-center my-5 bg-[#fff] rounded-full px-3 py-3 w-full justify-center font-roboto text-[18px] font-medium text-sky-400">
-                    <IoCartOutline className="text-[22px] text-sky-400" />
+                  <button className="flex gap-x-3 items-center my-5 bg-[#fff] rounded-full lg:px-3 lg:py-3 p-2 w-full justify-center font-roboto lg:text-[18px] text-[14px] font-medium text-sky-400">
+                    <IoCartOutline className="lg:text-[22px] text-[16px] text-sky-400" />
                     Add to Cart
                   </button>
-                  <h3 className="py-2 font-roboto lg:text-[18px] text-[16px] font-normal">
+                  <h3 className="py-2 font-roboto lg:text-[18px] text-[12px] font-normal lg:block hidden">
                     {capitem.title}
                   </h3>
-                  <p className="font-roboto lg:text-[18px] text-[16px] font-medium">
+                  <p className="font-roboto lg:text-[18px] text-[14px] font-medium">
                     ${capitem.price}
                   </p>
                   </div>
                   </Link>
                 </div>
               ))}
-            </div>
+              </div>
           </div>
         </div>
         <div className="mt-10 text-right">

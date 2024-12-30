@@ -115,7 +115,9 @@ const Navbar = () => {
             </Link>
             <div className="flex items-center gap-x-5 lg:order-3 order-2 border-r-2 lg:border-0 pr-3">
               <div className="realative">
-                <FaShoppingCart className="lg:text-[20px] text-[18px] text-white" />
+                <Link to="/cart">
+                <FaShoppingCart className="lg:text-[20px] text-[18px] text-white cursor-pointer" />
+                </Link>
                 {cartdata.length > 0 ? (
                   <div className="absolute lg:top-[25px] lg:right-[80px] top-2 right-4 flex items-center justify-center lg:h-[18px] lg:w-[18px] h-[15px] w-[15px] bg-[#ffffff] rounded-full">
                     {cartdata.length}

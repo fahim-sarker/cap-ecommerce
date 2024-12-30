@@ -200,8 +200,6 @@ const Productdetails = () => {
             </div>
           </div>
         </div>
-
-        {/* Related Products */}
         <div className="pt-16">
           <h3 className="lg:text-[40px] text-[20px] font-medium font-roboto">
             Related Products
@@ -213,7 +211,7 @@ const Productdetails = () => {
                 className="flex justify-center gap-x-5 my-10 cursor-pointer"
               >
                 <Link to={`/${item.id}`}>
-                  <div className="w-[500px] lg:h-[500px] h-[300px] pt-5 px-2 bg-white  rounded-md border-2 border-gray-300">
+                  <div className="lg:w-[500px] w-full lg:h-[500px] h-[320px] pt-5 px-2 bg-white  rounded-md border-2 border-gray-300">
                     <img src={item.image} alt="" className="lg:w-full w-[250px] lg:h-[300px] h-[150px]" />
                     <div className="p-4">
                       <h4 className="font-roboto font-medium text-[18px] text-[#333]">
